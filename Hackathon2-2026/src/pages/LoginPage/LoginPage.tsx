@@ -1,13 +1,28 @@
 import './logindesign.css'
 import { useState } from 'react'
+import {login, getMe} from '../../utils/authAPI'
+import { useNavigate } from 'react-router-dom';
+import {useAuth} from '../../context/AuthenticationContext'
 
 function LoginPage() {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const {setUser} = useAuth();
+    
 
-    const TryLogin = () => {
-        console.log('Username:', username);
-        console.log('Password:', password);
+    const TryLogin = async () => {
+        try{
+            const res = await login(username, password);
+            console.log(res);
+            const currentUser = await getMe();
+            setUser(currentUser);
+            navigate("/dashboard");
+        }
+        catch(err)
+        {
+            console.log("error signing in")
+        }
     }
 
     return (

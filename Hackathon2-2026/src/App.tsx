@@ -1,10 +1,29 @@
 import "./App.css";
-import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import { AuthProvider } from "./context/AuthenticationContext";
 
 function App() {
-  return <DashboardPage />;
+  return(
+    <Router>
+      <AuthProvider>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />}></Route>
+        <Route path="/login" element={<LoginPage></LoginPage>}></Route>
+        <Route path="/register" element={<RegisterPage/>}></Route>
+
+        <Route element={<ProtectedRoute></ProtectedRoute>}>
+            <Route path="/dashboard" element={<DashboardPage/>}></Route>
+        </Route>
+
+      </Routes>
+      </AuthProvider>
+    </Router>
+  )
 }
+
 
 export default App;
