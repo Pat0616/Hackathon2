@@ -7,10 +7,10 @@
   margin-top:8rem;
   display: flex;
   justify-content: space-between;
-
+  margin-bottom: 3rem;
 }
 
-.card{
+.card-stats{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
   border-radius: 0.5rem;
 }
 
-.card .count{
+.card-stats .count{
   font-size: 2rem;
   font-weight: bold;
 }

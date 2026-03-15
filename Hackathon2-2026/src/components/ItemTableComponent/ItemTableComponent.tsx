@@ -8,6 +8,14 @@ function ItemTableComponent() {
         { name: 'Milk', category: 'Drink', quantity: 50, price: '$5', status: 'Available' },
         { name: 'Bread', category: 'Food', quantity: 0, price: '$2', status: 'Out of Stock' },
         { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
+        { name: 'Eggs', category: 'Food', quantity: 10, price: '$3', status: 'Low Stock' },
         
 
     ];

@@ -7,25 +7,25 @@ function StatsCardComponent() {
   const [outOfStock] = useState<number>(5);
   return (
     <div className="container">
-      <div className="card">
+      <div className="card-stats">
         <p className="count" style={{ color: "black" }}>
           {totalItems}
         </p>
         <p className="label">Total Items</p>
       </div>
-      <div className="card">
+      <div className="card-stats">
         <p className="count" style={{ color: "green" }}>
           {inStock}
         </p>
         <p className="label"> In Stock</p>
       </div>
-      <div className="card">
+      <div className="card-stats">
         <p className="count" style={{ color: "yellow" }}>
           {lowStock}
         </p>
         <p className="label">Low Stock</p>
       </div>
-      <div className="card">
+      <div className="card-stats">
         <p className="count" style={{ color: "red" }}>
           {outOfStock}
         </p>
