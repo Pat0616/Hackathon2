@@ -1,10 +1,10 @@
 import "./StatsCardComponent.css";
 import { useState } from "react";
 function StatsCardComponent() {
-  const [totalItems] = useState<number>(100);
   const [inStock] = useState<number>(90);
   const [lowStock] = useState<number>(86);
   const [outOfStock] = useState<number>(5);
+  const [totalItems] = useState<number>(inStock + lowStock);
   return (
     <div className="container">
       <div className="card-stats">
