@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+.container{
+  margin-top:8rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  height: 7rem;
+  width: 15rem;
+  border: solid 0.1rem grey;
+  gap: 0.4rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card .count{
+  font-size: 2rem;
+  font-weight: bold;
+}
