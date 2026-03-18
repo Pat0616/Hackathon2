@@ -41,7 +41,7 @@ function ItemStatusComponent({ name, category, quantity, price }: Props) {
       <p>{editName}</p>
       <p>{category}</p>
       <p>{editQty}</p>
-      <p>{editPrice}</p>
+      <p>${editPrice}</p>
       <p className={status.className} style={{ color: status.color }}>{status.label}</p>
       <button className="btn-edit" onClick={() => setIsEditing(true)}>Edit</button>
     </div>

@@ -107,11 +107,17 @@ function ItemTableComponent() {
 
 
   const GetAllProductsArray = async () => {
+    try{
     const res = await GetProduct();
-    setAllProducts(res);
+    setSearchedProducts(res);
 
     console.log(res);
     console.log(allProducts);
+    }
+    catch(err)
+    {
+      console.log("error getting products")
+    }
   }
 
 
@@ -150,9 +156,9 @@ function ItemTableComponent() {
           <p>Action</p>
         </div>
         <div className="table-body">
-          {searchedProducts.map((item, index) => (
+          {searchedProducts.map((item) => (
             <ItemStatusComponent
-              key={index}
+              key={item.product_id}
               name={item.product_name}
               category={item.category}
               quantity={item.product_quantity}

@@ -8,7 +8,7 @@ body: JSON.stringify({ product_name, product_quantity, product_price, model_name
 }
 
 export function GetProduct() {
-return apiRequest("/api/products/allproduct", {
+return apiRequest("/api/products/allproducts", {
 method: "GET",
 });
 }
