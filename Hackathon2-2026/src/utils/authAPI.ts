@@ -1,5 +1,5 @@
 // src/api/auth.ts
-import { apiRequest } from "./RestApi";
+import { apiRequest } from "./RestAPI";
 // Login user
 export function login(username: string, password: string) {
 return apiRequest("/api/auth/login", {
