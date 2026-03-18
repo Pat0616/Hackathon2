@@ -1,8 +1,12 @@
 import './receiptpopupdesign.css'
-import { useState } from 'react'
 
-function ReceiptPopup() {
-    const [isOpen, setIsOpen] = useState(false);
+interface Props
+{
+    OpenReceiptSummary: () => void;
+}
+
+function ReceiptPopup({OpenReceiptSummary}: Props) {
+
 
 
     return (
@@ -46,7 +50,7 @@ function ReceiptPopup() {
                     </div>
                     
                 </div>
-                <button className="print-button" onClick={() => setIsOpen(false)}>Okay</button>
+                <button className="print-button" onClick={OpenReceiptSummary} >Okay</button>
             </div>
         </div>
     )

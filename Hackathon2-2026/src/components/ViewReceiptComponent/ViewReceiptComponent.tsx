@@ -6,12 +6,20 @@ type Item = {
   id: number;
   name: string;
   price: number;
+ 
 };
 
-function ViewReceiptComponent() {
+interface Props
+{
+   OpenReceipt: () => void
+}
+
+function ViewReceiptComponent({OpenReceipt}: Props) {
   const [loading, setLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [realTotal, setRealTotal] = useState<number>(0);
+
+
 
   const ComputeTotalPrice = (itemprice: number) => {
     console.log("Added Price");
@@ -82,9 +90,10 @@ function ViewReceiptComponent() {
         <p>TOTAL</p>
         <p>{realTotal}</p>
       </div>
-      <button className="btnCheckout">Checkout</button>
+      <button className="btnCheckout" onClick={OpenReceipt}>Checkout</button>
     </div>
   );
+
 }
 
 export default ViewReceiptComponent;

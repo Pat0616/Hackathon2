@@ -31,6 +31,7 @@ function Order({ name, price, SendTotalPrice, RemoveThisItem }: Props) {
       setItemQuantity((prev) => prev - 1);
       SendTotalPrice(-price);
     } else {
+      SendTotalPrice(-price);
       RemoveThisItem();
     }
   };
