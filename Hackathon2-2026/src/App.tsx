@@ -5,6 +5,7 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import { AuthProvider } from "./context/AuthenticationContext";
+import PurchasePage from "./pages/PurchasePage/PurchasePage";
 
 function App() {
   return(
@@ -14,6 +15,10 @@ function App() {
         <Route path="/" element={<Navigate to="/login" replace />}></Route>
         <Route path="/login" element={<LoginPage></LoginPage>}></Route>
         <Route path="/register" element={<RegisterPage/>}></Route>
+
+        <Route path="/purchase" element={<PurchasePage/>}></Route>
+
+
 
         <Route element={<ProtectedRoute></ProtectedRoute>}>
             <Route path="/dashboard" element={<DashboardPage/>}></Route>
