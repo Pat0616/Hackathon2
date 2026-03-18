@@ -1,3 +1,4 @@
+import { AddProduct } from '../../utils/productsAPI';
 import './additem.css';
 import {useState} from 'react'
 
@@ -14,11 +15,14 @@ function AddItemComponent({itemPopupHide}: Props)
     const [modelName, setModelName] = useState<string>("");
     const [quantity, setQuantity] = useState<number>(0);
     const [price, setPrice] = useState<number>(0);
+    const [notes, setNotes] = useState<string>('');
 
 
-    const SaveItem = () =>
+    const SaveItem = async () =>
     {
+        const res = AddProduct(itemName,quantity, price, modelName, category, notes)
         console.log(itemName, category, modelName, quantity, price);
+        console.log(res);
         itemPopupHide();
         ClearAllData();
     }
@@ -75,7 +79,7 @@ function AddItemComponent({itemPopupHide}: Props)
                 </div>
 
                 <p className='additem-popup-subtitles'>Notes</p>
-                <textarea className='additem-notes-input'></textarea>
+                <textarea className='additem-notes-input' value={notes} onChange={(e) => setNotes(e.target.value)}></textarea>
 
                 <div className='additem-optionbutton-container'>
                     <button onClick={CancelSaveItem} className='additem-button-cancel'>Cancel</button>
