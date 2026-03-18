@@ -1,10 +1,17 @@
 import "./headerbar.css";
 import {useState, useEffect} from 'react';
 import {getMe} from '../../utils/authAPI';
+import {Link} from 'react-router-dom';
 
+interface Props
+{
+  ShowAddItem: () => void;
+}
 
-function HeaderBarComponent() {
+function HeaderBarComponent({ShowAddItem}: Props) {
     const [userName, setUserName] = useState<string>("");
+
+    
 
     useEffect(() => {
         GetUserName();
@@ -21,14 +28,14 @@ function HeaderBarComponent() {
     <div className="header">
       <div className="leftside">
         <div className="logo">
-          <p>Inventory</p>
+          <Link to="/purchase" className="purchasepage-buttonlink">Purchase</Link>
         </div>
-        <p>Purchase</p>
+        <p>/ Inventory</p>
       </div>
 
     <p>Welcome {userName} </p>
 
-      <button className="additem">+ Add Item</button>
+      <button className="additem" onClick={ShowAddItem}>+ Add Item</button>
     </div>
   );
 }

@@ -1,0 +1,133 @@
+.darken-bg-container
+{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+
+    background-color: rgb(37, 37, 37, .5);
+
+
+    justify-content: center;
+    align-items: center;
+   
+    font-family: Arial;
+
+}
+
+.additem-card-container
+{
+
+    display: flex;
+    flex-direction: column;
+  
+    text-align: left;
+    width: 30rem;
+    height: 40rem;
+
+    background-color: white;
+
+    border: solid .5px gray;
+    border-radius: 10px;
+    padding: 2rem;
+    gap: .5rem;
+
+
+}
+
+
+.line-divider
+{
+    border-bottom: solid .5px grey;
+    color: grey;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+
+.additem-dual-input-container
+{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 2rem;
+}
+
+.additem-input-container
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.additem-tailbar-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.additem-notes-input
+{
+    font-size: .9rem;
+    padding: .5rem;
+    resize: none;
+    height: 7rem;
+}
+
+.additem-popup-title
+{
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.additem-popup-subtitles
+{
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(72, 72, 72);
+    margin: .3rem;
+}
+
+.additem-inputs
+{
+    height: 2.5rem;
+    border-width: .5px;
+    border-radius: 7px;
+    padding-left: 9px;
+}
+
+.additem-optionbutton-container
+{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: right;
+}
+
+.additem-button-cancel{
+
+color: white;
+font-weight: bold;
+padding: 1rem;
+
+background-color: rgb(141, 141, 141);
+border-radius: 7px;
+border: none;
+}
+
+.additem-button-save{
+color: white;
+font-weight: bold;
+padding: 1rem;
+
+border-radius: 7px;
+background-color: rgb(84, 124, 255);
+border: none;
+}
