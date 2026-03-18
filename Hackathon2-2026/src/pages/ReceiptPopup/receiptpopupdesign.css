@@ -1,0 +1,81 @@
+/* ------------------------------Style for the receipt details----------------------------------- */
+.receiptpopup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ✅ KEY FIX */
+
+  overflow-y: auto;        /* page scroll */
+  padding: 20px;
+  background: rgba(0,0,0,0.5);
+}
+
+.receiptpopup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    min-height: 500px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receiptpopup-container h1 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+}
+
+.receiptcheck {
+    text-align: middle;
+    font-size: 80px;
+    line-height: 1.5;
+}
+
+.receipt-details {
+    display: flex;
+    flex-direction: column;
+    border: #ccc 0.5px dashed;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: left;
+    font-size: 13px;
+    width: 350px;
+    min-height: 215px;
+    margin-top: 20px;
+}
+
+.div-divider {
+    justify-self: center;
+    border-bottom: dashed ;
+    border-color: rgb(182, 182, 182);
+    border-width: .3px;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.total-row {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.print-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
