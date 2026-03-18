@@ -1,7 +1,7 @@
-import { SearchProduct } from "../../utils/productsAPI";
+import { SearchProduct, GetProduct } from "../../utils/productsAPI";
 import ItemStatusComponent from "./ItemStatusComponent";
 import "./itemtable.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Products = {
   product_id: number;
@@ -102,8 +102,20 @@ function ItemTableComponent() {
   ];
 
   const [searchedProducts, setSearchedProducts] = useState<Products[]>([]);
+  const [allProducts, setAllProducts] = useState<Products[]>([]);
   const [searchinput, setsearchinput] = useState<string>("");
 
+
+  const GetAllProductsArray = async () => {
+    const res = await GetProduct();
+    setAllProducts(res);
+
+    console.log(res);
+    console.log(allProducts);
+  }
+
+
+  
   const GetSearchProducts = async () => {
     const res = await SearchProduct(searchinput);
     setSearchedProducts(res);
@@ -111,6 +123,10 @@ function ItemTableComponent() {
     console.log(res);
     console.log(searchedProducts);
   };
+
+  useEffect(() => {
+    GetAllProductsArray();
+  },[])
 
   return (
     <div className="card">
